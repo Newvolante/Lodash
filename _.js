@@ -1,12 +1,12 @@
 let _ = {
     clamp(num, minBound, maxBound) {
-        if (num > minBound && num < maxBound) return num;
-        if (num < minBound && num < maxBound) return minBound;
-        if (num > minBound && num > maxBound) return maxBound;
+        let minClamped = Math.max(num, minBound);
+        let clamped = Math.min(minClamped, maxBound);
+        return Math.min(minClamped, clamped);
     }
 };
 
-console.log(_.clamp(3,2,4));
+console.log(_.clamp(0,1,3));
 console.log(_.clamp(1,2,4));
 console.log(_.clamp(5,2,4));
 
