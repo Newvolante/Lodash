@@ -1,4 +1,18 @@
-let _ = {};
+let _ = {
+    clamp(num, minBound, maxBound) {
+        switch(num) {
+            case num < minBound:
+                return minBound;
+                break;
+            case num > maxBound:
+                return maxBound;
+                break;
+            default:
+                return num;
+
+        }
+    }
+};
 
 
 
