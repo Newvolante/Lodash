@@ -5,7 +5,15 @@ let _ = {
         return Math.min(minClamped, clamped);
     },
     inRange(num, start, end) {
-        
+        if (!end) {
+            end = start;
+            start = 0;
+        } else if (start > end) {
+            let temp = start;
+            start = end;
+            end = temp;
+        }
+        return (num >= start && num < end);
     }
 };
 
