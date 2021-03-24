@@ -15,6 +15,11 @@ let _ = {
             end = temp;
         }
         return (num >= start && num < end);
+    }, words(str) {
+        return str.split(' ');
+    },
+    pad() {
+        
     }
 };
 
