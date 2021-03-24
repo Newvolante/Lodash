@@ -8,7 +8,8 @@ let _ = {
         if (!end) {
             end = start;
             start = 0;
-        } else if (start > end) {
+        }
+        if (start > end) {
             let temp = start;
             start = end;
             end = temp;
