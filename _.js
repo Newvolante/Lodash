@@ -3,6 +3,9 @@ let _ = {
         let minClamped = Math.max(num, minBound);
         let clamped = Math.min(minClamped, maxBound);
         return Math.min(minClamped, clamped);
+    },
+    inRange(num, start, end) {
+        
     }
 };
 
