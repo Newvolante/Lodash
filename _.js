@@ -18,35 +18,17 @@ let _ = {
     }, words(str) {
         return str.split(' ');
     },
-    pad(string, length) {
-        // if length < string.length it returns the string itself
+    pad(string, length) {   // pad("hi", 5);
         if (length < string.length) return string;
-
-        let stringToArr = string.split('');
-        console.log(stringToArr);
-        let spacesToAdd = length - string.length;
-        let startSpaces = '';
-        let endSpaces = '';
-
-        let counter = Math.floor(spacesToAdd/2);
-
-        if (spacesToAdd > 0) {
-            for (let i = 0; i < counter; i++) {
-                console.log("iteration for startSpaces:", i);
-                startSpaces += ' ';
-            }
-            for (let i = 0; i < counter; i++) {
-                console.log("iteration for endSpaces:", i);
-                endSpaces += ' ';
-            }
-            if (spacesToAdd % 2 != 0) endSpaces += " ";
-            return startSpaces + stringToArr.join('') + endSpaces;
-        }
+        let spacesToAdd = length - string.length;   // 5 - 2 = 3
+        let startSpaces = ' '.repeat(Math.floor(spacesToAdd / 2)); // adds 1
+        let endSpaces = ' '.repeat(length - string.length - startSpaces.length);  // 5 - 2 - 1
+        return startSpaces + string + endSpaces;
     }
 };
 
-// console.log(_.pad("test", 6));
-// console.log(_.pad("test", 7));
+console.log("hi, 6 " + _.pad("test", 5));
+console.log("hi, 7 " + _.pad("hi", 7));
 
 // Do not write or modify code below this line.
 module.exports = _;
