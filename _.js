@@ -26,12 +26,15 @@ let _ = {
         return startSpaces + string + endSpaces;
     },
     has(obj, key) {
-        
+        return obj.hasOwnProperty(key);
     }
 };
 
-console.log("hi, 6 " + _.pad("test", 5));
-console.log("hi, 7 " + _.pad("hi", 7));
+const a = {
+    b: 1
+}
+
+console.log(_.has(a, "b"));
 
 // Do not write or modify code below this line.
 module.exports = _;
