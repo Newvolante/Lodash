@@ -24,6 +24,9 @@ let _ = {
         let startSpaces = ' '.repeat(Math.floor(spacesToAdd / 2)); // adds 1
         let endSpaces = ' '.repeat(length - string.length - startSpaces.length);  // 5 - 2 - 1
         return startSpaces + string + endSpaces;
+    },
+    has(obj, key) {
+        
     }
 };
 
