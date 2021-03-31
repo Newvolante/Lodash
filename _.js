@@ -27,16 +27,22 @@ let _ = {
     },
     has(obj, key) {
         return obj.hasOwnProperty(key);
-    }, invert() {
-        
+    },
+    invert(obj) {
+            // new object
+        let newObj = {};
+
+            // iterating through the passed obj
+        for (let key in obj) {
+            newObj[obj[key]] = key;
+        }
+        return newObj;
     }
 };
 
-const a = {
-    b: 1
-}
+let test = { a: 1, b: 2, c: 1};
 
-console.log(_.has(a, "b"));
+console.log(_.invert(test));
 
 // Do not write or modify code below this line.
 module.exports = _;
