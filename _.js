@@ -44,8 +44,8 @@ let _ = {
         }
         return undefined;
     },
-    drop() {
-        
+    drop(arr, slots) {
+
     }
 };
 
