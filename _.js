@@ -36,8 +36,8 @@ let _ = {
         }
         return newObj;
     },
-    findKey() {
-        
+    findKey(obj, predFunc) {
+
     }
 };
 
