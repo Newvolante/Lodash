@@ -37,7 +37,12 @@ let _ = {
         return newObj;
     },
     findKey(obj, predFunc) {
-
+        for (let key in obj) {
+            let value = obj.key;
+            let predicateReturnValue = predFunc(value);
+            if (predicateReturnValue) return key;
+        }
+        return undefined;
     }
 };
 
