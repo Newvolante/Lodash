@@ -45,7 +45,9 @@ let _ = {
         return undefined;
     },
     drop(arr, slots) {
-
+        let newArr = [];
+        if (!slots) slots = 1;
+        return arr.slice(slots, arr.length+1);
     }
 };
 
