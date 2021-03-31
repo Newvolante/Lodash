@@ -29,14 +29,15 @@ let _ = {
         return obj.hasOwnProperty(key);
     },
     invert(obj) {
-            // new object
         let newObj = {};
 
-            // iterating through the passed obj
         for (let key in obj) {
             newObj[obj[key]] = key;
         }
         return newObj;
+    },
+    findKey() {
+        
     }
 };
 
