@@ -43,6 +43,9 @@ let _ = {
             if (predicateReturnValue) return key;
         }
         return undefined;
+    },
+    drop() {
+        
     }
 };
 
