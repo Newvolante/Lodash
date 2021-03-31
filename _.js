@@ -27,6 +27,8 @@ let _ = {
     },
     has(obj, key) {
         return obj.hasOwnProperty(key);
+    }, invert() {
+        
     }
 };
 
