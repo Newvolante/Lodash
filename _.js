@@ -45,15 +45,10 @@ let _ = {
         return undefined;
     },
     drop(arr, slots) {
-        let newArr = [];
         if (!slots) slots = 1;
         return arr.slice(slots, arr.length+1);
     }
 };
-
-let test = { a: 1, b: 2, c: 1};
-
-console.log(_.invert(test));
 
 // Do not write or modify code below this line.
 module.exports = _;
