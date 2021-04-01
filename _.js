@@ -47,6 +47,9 @@ let _ = {
     drop(arr, slots) {
         if (!slots) slots = 1;
         return arr.slice(slots, arr.length+1);
+    },
+    dropWhile(arr, predFunc) {
+
     }
 };
 
