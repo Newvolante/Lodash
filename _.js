@@ -48,8 +48,12 @@ let _ = {
         if (!slots) slots = 1;
         return arr.slice(slots, arr.length+1);
     },
-    dropWhile(arr, predFunc) {
-
+    dropWhile(arr, predicate) {
+        let dropNumber = arr.findIndex((element, index) => {
+            return !predicate(element, index, arr);
+        });
+        let droppedArray = this.drop(arr, dropNumber);
+        return droppedArray;
     }
 };
 
