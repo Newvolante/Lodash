@@ -54,6 +54,9 @@ let _ = {
         });
         let droppedArray = this.drop(arr, dropNumber);
         return droppedArray;
+    },
+    chunk(arr, size) {
+        
     }
 };
 
