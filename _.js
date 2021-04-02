@@ -56,9 +56,30 @@ let _ = {
         return droppedArray;
     },
     chunk(arr, size) {
-        
+        let subArrays;
+        arr.length % size === 0 ? subArrays = arr.length / size : subArrays = Math.round(arr.length / size) + 1
+        return subArrays;
+    },
+    chunk(arr, size) {
+        let newArr = [];
+
+        let numSubArrays = arr.length / size;
+        if (arr.length % size !== 0) numSubArrays += 1;
+
+        for (let i = 0; i < numSubArrays; i ++) {
+            let tempArr;
+            if (arr.length < size) {
+                newArr.push(arr);
+                return newArr;
+            } else {
+                tempArr = arr.splice(0, 2);
+                newArr.push(tempArr);
+            }
+        }
+        return newArr;
     }
 };
+
 
 // Do not write or modify code below this line.
 module.exports = _;
