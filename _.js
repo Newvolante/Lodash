@@ -63,23 +63,14 @@ let _ = {
     chunk(arr, size) {
         let newArr = [];
 
-        let numSubArrays = arr.length / size;
-        if (arr.length % size !== 0) numSubArrays += 1;
-
-        for (let i = 0; i < numSubArrays; i ++) {
-            let tempArr;
-            if (arr.length < size) {
-                newArr.push(arr);
-                return newArr;
-            } else {
-                tempArr = arr.splice(0, 2);
-                newArr.push(tempArr);
-            }
+        for (let i = 0; i < arr.length; i += size) {
+            let chunk = arr.slice(i, i + size);
+            newArr.push(chunk);
         }
+
         return newArr;
     }
 };
-
 
 // Do not write or modify code below this line.
 module.exports = _;
